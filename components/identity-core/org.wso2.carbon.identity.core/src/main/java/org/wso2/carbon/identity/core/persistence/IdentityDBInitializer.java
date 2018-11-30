@@ -78,6 +78,8 @@ public class IdentityDBInitializer {
                     type = "openedge";
                 } else if (databaseProductName.matches("(?i).*informix.*")) {
                     type = "informix";
+                } else if (databaseProductName.matches("(?i).*adaptive.*")) {
+                    type = "ase";
                 } else {
                     String msg = "Unsupported database: " + databaseProductName +
                             ". Database will not be created automatically by the WSO2 Identity Server. " +
